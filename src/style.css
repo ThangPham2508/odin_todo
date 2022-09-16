@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+#content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    height: 120px;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    background-color: #7FBCD2;
+    font-weight: bold;
+}
+
+#body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: #FFEEAF;
+    flex: 1;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 48px;
+    background-color: #E1FFEE;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.categories button, .projectList button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+    appearance: none;
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #E1FFEE;
+}
+
+.categories button:hover {
+    background-color: #A5F1E9;
+}
+
+button.selected {
+    background-color: #A5F1E9;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 2rem;
+}
+
+.logoimg {
+    width: 64px;
+}
+
+.icon {
+    width: 24px;
+}
+
+.projects .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.addproject {
+    width: 32px;
+    height: 32px;
+    appearance: none;
+    border: none;
+    background-color: #E1FFEE;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addproject:hover {
+    background-color: #A5F1E9;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.projectList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project .delete {
+    appearance: none;
+    background-color: inherit;
+    border: none;
+}
+
+.project .icon {
+    height: 15px;
+    width: 15px;
+}
+
+.prompt {
+    height: 100px;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 8px;
+}
+
+.prompt input {
+    grid-row: 1;
+    grid-column: 1 / 3;
+}
+
+.prompt button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+}
+
+.prompt .add {
+    background-color: rgb(159, 232, 155);
+}
+
+.prompt .cancel {
+    background-color: rgb(232, 155, 155)
+}
+
+#todos {
+    padding: 32px 164px;
+    display: flex;
+    flex-direction: column;
+}
+
+#todos .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+.todo, .addtask {
+    background-color: #E1FFEE;
+    height: 64px;
+    padding: 32px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.todo:hover, .addtask:hover {
+    background-color: #A5F1E9;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    vertical-align: -2px;
+}
+
+input[type="checkbox"]::before {
+    content: "✔";
+    position: absolute;
+    font-size: 1.7em;
+    right: -1px;
+    top: -0.2em;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+
+.todo .title {
+    margin-right: auto;
+    font-size: 1.25rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title.done {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.priority {
+    border: 3px solid rgb(246, 182, 153);
+}
+
+.todo button .icon {
+    width: 20px;
+}
+
+.todo button, input[type="date"], input[type="text"] {
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    border: none;
+}
+
+input[type="date"]:focus {
+    background-color: #E1FFEE;
+}
+
+.addtask {
+    font-size: 1.25rem;
+}
+
+input[type="text"] {
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
+
+button {
+    display: flex;
+}
